@@ -14,8 +14,8 @@
 #define WYZ_FX_CHANNEL 				1		// Where to play sound effects
 
 // Music indexes, comment if not applicable
-#define MUSIC_TITLE 				0
-#define MUSIC_INGAME 				1
+//#define MUSIC_TITLE 				0
+//#define MUSIC_INGAME 				1
 //#define MUSIC_GOVER 				2
 //#define MUSIC_ENDING 				3
 //#define MUSIC_SCLEAR 				4
@@ -41,9 +41,10 @@
 
 #define MAP_W						8		//
 #define MAP_H						4		// Map dimensions in screens
+// multilevel: esto ya no se define aquí sino en levelset.h
 #define SCR_INICIO					0		// Initial screen
-#define PLAYER_INI_X				3		//
-#define PLAYER_INI_Y				3		// Initial tile coordinates
+#define PLAYER_INI_X				0		//
+#define PLAYER_INI_Y				0		// Initial tile coordinates
 #define SCR_FIN 					99		// Last screen. 99 = deactivated.
 //#define PLAYER_FIN_X				99		//
 //#define PLAYER_FIN_Y				99		// Player tile coordinates to finish game
