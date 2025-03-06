@@ -42,8 +42,8 @@
 #define MAP_W						8		//
 #define MAP_H						4		// Map dimensions in screens
 #define SCR_INICIO					0		// Initial screen
-#define PLAYER_INI_X				1		//
-#define PLAYER_INI_Y				1		// Initial tile coordinates
+#define PLAYER_INI_X				3		//
+#define PLAYER_INI_Y				3		// Initial tile coordinates
 #define SCR_FIN 					99		// Last screen. 99 = deactivated.
 //#define PLAYER_FIN_X				99		//
 //#define PLAYER_FIN_Y				99		// Player tile coordinates to finish game
@@ -347,7 +347,7 @@ extern unsigned char def_keys [0];
 #define PLAYER_G					32		// Gravity acceleration 
 
 #define PLAYER_VY_INICIAL_SALTO		64 		// Initial junp velocity 
-#define PLAYER_MAX_VY_SALTANDO		372 	// Max jump velocity 
+#define PLAYER_MAX_VY_SALTANDO		300 	// Max jump velocity 
 #define PLAYER_INCR_SALTO			48		// acceleration while JUMP is pressed 
 
 #define PLAYER_INCR_JETPAC			32		// Vertical jetpac gauge

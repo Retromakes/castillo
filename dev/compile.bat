@@ -22,7 +22,7 @@ cd ..\dev
 if [%1]==[justscripts] goto :compile
 
 echo Convirtiendo mapa (el 15 final es el tile de cerrojo)
-..\utils\mapcnv.exe ..\map\mapa0.map assets\mapa.h 8 4 15 10 15
+..\utils\mapcnv.exe ..\map\mapa2.map assets\mapa.h 8 4 15 10 15
 
 echo Convirtiendo enemigos/hotspots
 ..\utils\ene2h.exe ..\enems\enems0.ene assets\enems.h
