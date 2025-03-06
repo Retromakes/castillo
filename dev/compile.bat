@@ -22,16 +22,61 @@ cd ..\dev
 if [%1]==[justscripts] goto :compile
 
 echo Convirtiendo mapa (el 15 final es el tile de cerrojo)
-..\utils\mapcnv.exe ..\map\mapa2.map assets\mapa.h 8 4 15 10 15
+REM multilevel
+REM ..\utils\mapcnv.exe ..\map\mapa0.map assets\mapa.h 8 4 15 10 15 packed
+..\utils\mapcnvbin.exe ..\map\mapa0.map ..\bin\mapa_bolts0.bin 8 4 15 10 15 packed >nul
+..\utils\mapcnvbin.exe ..\map\mapa1.map ..\bin\mapa_bolts1.bin 8 4 15 10 15 packed >nul
+..\utils\mapcnvbin.exe ..\map\mapa2.map ..\bin\mapa_bolts2.bin 8 4 15 10 15 packed >nul
+
+..\utils\apultra.exe ..\bin\mapa_bolts0.bin ..\bin\mapa_bolts0c.bin >nul
+..\utils\apultra.exe ..\bin\mapa_bolts1.bin ..\bin\mapa_bolts1c.bin >nul
+..\utils\apultra.exe ..\bin\mapa_bolts2.bin ..\bin\mapa_bolts2c.bin >nul
+
+del ..\bin\mapa_bolts?.bin >nul
+REM fin multilevel
 
 echo Convirtiendo enemigos/hotspots
-..\utils\ene2h.exe ..\enems\enems0.ene assets\enems.h
+REM multilevel
+REM ..\utils\ene2h.exe ..\enems\enems0.ene assets\enems.h
+..\utils\ene2bin_mk1.exe ..\enems\enems0.ene ..\bin\enems_hotspots0.bin 2 >nul
+..\utils\ene2bin_mk1.exe ..\enems\enems1.ene ..\bin\enems_hotspots1.bin 2 >nul
+..\utils\ene2bin_mk1.exe ..\enems\enems2.ene ..\bin\enems_hotspots2.bin 2 >nul
+
+..\utils\apultra.exe ..\bin\enems_hotspots0.bin ..\bin\enems_hotspots0c.bin >nul
+..\utils\apultra.exe ..\bin\enems_hotspots1.bin ..\bin\enems_hotspots1c.bin >nul
+..\utils\apultra.exe ..\bin\enems_hotspots2.bin ..\bin\enems_hotspots2c.bin >nul
+
+del ..\bin\enems_hotspots?.bin >nul
+REM fin multilevel
 
 if [%1]==[nogfx] goto :compile
 
 echo Importando GFX
 ..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=chars greyordered in=..\gfx\font.png out=..\bin\font.bin silent > nul
-..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=strait2x2 greyordered in=..\gfx\work.png out=..\bin\work.bin silent > nul
+REM multilevel
+REM ..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=strait2x2 greyordered in=..\gfx\work.png out=..\bin\work.bin silent > nul
+..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=strait2x2 greyordered in=..\gfx\work0.png out=..\bin\tileset0.bin >nul
+..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=strait2x2 greyordered in=..\gfx\work1.png out=..\bin\tileset1.bin >nul
+..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=strait2x2 greyordered in=..\gfx\work2.png out=..\bin\tileset2.bin >nul
+
+..\utils\apultra.exe ..\bin\tileset0.bin ..\bin\tileset0c.bin >nul
+..\utils\apultra.exe ..\bin\tileset1.bin ..\bin\tileset1c.bin >nul
+..\utils\apultra.exe ..\bin\tileset2.bin ..\bin\tileset2c.bin >nul
+
+del  ..\bin\tileset?.bin >nul
+REM fin multilevel
+
+REM multilevel
+echo Converting behs
+..\utils\behs2bin.exe ..\gfx\behs0_1.txt ..\bin\behs0_1.bin >nul
+..\utils\behs2bin.exe ..\gfx\behs2.txt ..\bin\behs2.bin >nul
+
+..\utils\apultra.exe ..\bin\behs0_1.bin ..\bin\behs0_1c.bin >nul
+..\utils\apultra.exe ..\bin\behs2.bin ..\bin\behs2c.bin >nul
+
+del  ..\bin\behs0_1.bin >nul
+del  ..\bin\behs2.bin >nul
+REM fin multilevel
 
 ..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=sprites in=..\gfx\sprites.png out=..\bin\sprites.bin mappings=assets\spriteset_mappings.h pixelperfectm0 silent > nul
 

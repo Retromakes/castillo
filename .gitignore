@@ -1,2 +1,3 @@
 # Ignora la carpeta .vs de Visual Studio
 .vs/
+/.vs/slnx.sqlite

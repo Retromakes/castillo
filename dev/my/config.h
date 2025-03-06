@@ -51,10 +51,13 @@
 #define PLAYER_LIFE 				10		// Max and starting life gauge.
 #define PLAYER_REFILL				1		// Life recharge
 #define PLAYER_DONT_LIMIT_LIFE				// PLAYER_LIFE isn't max.
-//#define COMPRESSED_LEVELS 				// use levels.h instead of mapa.h and enems.h (!)
+// multilevel
+#define COMPRESSED_LEVELS 				// use levels.h instead of mapa.h and enems.h (!)
 //#define PER_LEVEL_SPRITESET 				// use a different spriteset for each level in 48K
-//#define PER_LEVEL_TILESET 				// use a different tileset for each level
-//#define MAX_LEVELS				4		// # of compressed levels
+// multilevel
+#define PER_LEVEL_TILESET 				// use a different tileset for each level
+// multilevel
+#define MAX_LEVELS				3		// # of compressed levels
 //#define REFILL_ME 						// If defined, refill player on each level
 
 // ============================================================================
@@ -77,7 +80,7 @@
 // General directives:
 // -------------------
 
-//#define PLAYER_CHECK_MAP_BOUNDARIES		// If defined, you can't exit the map.
+#define PLAYER_CHECK_MAP_BOUNDARIES		// If defined, you can't exit the map.
 //#define DIRECT_TO_PLAY					// If defined, title screen is also the game frame.
 #define DEACTIVATE_KEYS 					// If defined, keys are not present.
 #define DEACTIVATE_OBJECTS				// If defined, objects are not present.
@@ -317,7 +320,7 @@ extern unsigned char def_keys [0];
 
 //#define USE_AUTO_SHADOWS					// Automatic shadows made of darker attributes
 //#define USE_AUTO_TILE_SHADOWS 			// Automatic shadows using specially defined tiles 32-47.
-#define UNPACKED_MAP						// Full, uncompressed maps. Shadows settings are ignored.
+//#define UNPACKED_MAP						// Full, uncompressed maps. Shadows settings are ignored.
 //#define PACKED_MAP_ALT_TILE 		19		// If defined, in 16 tiles mode, alt tile (default 19)
 
 //#define PLAYER_CUSTOM_ANIMATION 			// Code your own animation in my/custom_animation.h
