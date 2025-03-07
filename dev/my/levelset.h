@@ -94,6 +94,6 @@ extern unsigned char behs_2 [0];
 // c_map_bolts, [c_tileset], c_enems_hotspots, c_behs, [c_sprites], [script], music_id (en Tarzanete 0=title, 1=ingame(que esta vacia))
 LEVEL levels [] = {
 	{ 8, 4, 26, 8, 5, 10, map_bolts_0, tileset_0, enems_hotspots_0, behs_0_1, 1 },
-    { 8, 4, 0, 3, 3, 10, map_bolts_1, tileset_1, enems_hotspots_1, behs_0_1 },
-    { 8, 4, 0, 3, 3, 10, map_bolts_2, tileset_2, enems_hotspots_2, behs_2 }
+    { 8, 4, 0, 3, 3, 10, map_bolts_1, tileset_1, enems_hotspots_1, behs_0_1, 1 },
+    { 8, 4, 0, 3, 3, 10, map_bolts_2, tileset_2, enems_hotspots_2, behs_2, 1 }
 };
