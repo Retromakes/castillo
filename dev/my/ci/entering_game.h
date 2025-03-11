@@ -2,4 +2,6 @@
 // Copyleft 2010-2014, 2020 by the Mojon Twins
 
 // reproduzco sonido
-wyz_play_sound(0);
+//wyz_play_sound(0);
+
+inv_botas = 0;

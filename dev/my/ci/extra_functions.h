@@ -7,35 +7,9 @@ wyz_play_sound(3);
 flags[30] = 0;
 */
 
-/*
-void Coloca_Objeto(unsigned int n_obj, unsigned int x_obj, unsigned int y_obj) {
-    _x = x_obj; _y = y_obj; _t = flags[n_obj]; _n = 128; update_tile ();
+void Coloca_Objeto(unsigned int n_tile, unsigned int x_obj, unsigned int y_obj) {
+    _x = x_obj; _y = y_obj; _t = n_tile; _n = 128; update_tile ();
 }
-
-void Coloca_Obstaculo(unsigned int sprite_obs, unsigned int x_obs, unsigned int y_obs) {
-    _x = x_obs; _y = y_obs; _t = sprite_obs; _n = 8; update_tile ();
-}
-
-void Coloca_Walkable(unsigned int sprite_obs, unsigned int x_obs, unsigned int y_obs) {
-    _x = x_obs; _y = y_obs; _t = sprite_obs; _n = 0; update_tile ();
-}
-
-void Vacia(unsigned int x_obs, unsigned int y_obs) {
-    _x = x_obs; _y = y_obs; _t = _n = 0; update_tile ();
-}
-
-void EscribeTextoPantalla(void) {
-    _x = 0; _y = 23; _t = 79;
-    _gp_gen = textos_pantallas[n_pant];
-    print_str ();
-}
-
-void EscribeTexto(char *frase) {
-    _x = 0; _y = 23; _t = 79;
-    _gp_gen = frase;
-    print_str ();
-}
-*/
 
 void CambiaNivel(unsigned int nivel_destino, unsigned int pantalla_destino, unsigned int x_inicio, unsigned int y_inicio) {
     level = nivel_destino;
@@ -44,4 +18,16 @@ void CambiaNivel(unsigned int nivel_destino, unsigned int pantalla_destino, unsi
     gpy = y_inicio << 4; p_y = gpy << FIXBITS;
     warp_to_level = success = 1;
     playing = 0;
+}
+
+
+void Recoge_Objeto() {
+    // sfx
+    wyz_play_sound(5);
+
+    // dibujo el tile actualizado con el fondo de la zona (tile 1)
+    _x = p_tx; _y = p_ty; _t = 1; _n = 0; update_tile ();
+
+    // tengo q comprobar que objeto cojo para hacer lo que toque aqui
+    if (level == 0) inv_botas = 1;
 }

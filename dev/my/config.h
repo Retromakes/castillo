@@ -173,7 +173,7 @@
 // ---------
 
 //#define ACTIVATE_SCRIPTING				// Activates msc scripting and flag related stuff.
-#define MAX_FLAGS 					33
+//#define MAX_FLAGS 					1
 //#define SCRIPTING_DOWN					// Use DOWN as the action key.
 //#define SCRIPTING_KEY_AUX1				// Use AUX1 as the action key instead.
 //#define SCRIPTING_KEY_FIRE				// User FIRE as the action key instead.
@@ -384,8 +384,13 @@ extern unsigned char def_keys [0];
 // You can add the numbers to get combined behaviours
 // Save for 10 (special), but that's obvious, innit?
 #ifndef COMPRESSED_LEVELS
+
+// tile 0 - fondo negro
+// tile 1 - fondo escenario actual
+// tile 15 (exterior: botas, castillo: pinchos, catapumbas: jetpack o tiraorientales si se pone, que podria ser 14)
+
 unsigned char behs [] = {
-	0, 0, 8, 1, 8, 8, 8, 4, 8, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 8, 1, 8, 8, 8, 4, 8, 0, 0, 0, 0, 0, 0, 128,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };

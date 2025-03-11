@@ -636,7 +636,7 @@ unsigned char player_move (void) {
 				#endif
 			#endif
 
-			if (rda) {
+			if (rda && inv_botas == 1) {
 				#include "my/ci/on_controller_pressed/up.h"
 					
 				#ifdef PLAYER_CUMULATIVE_JUMP
@@ -1110,10 +1110,7 @@ unsigned char player_move (void) {
 	// Special tiles
 	if (rdb & 128) {
 		#include "my/ci/on_special_tile.h"
-	} else {
-        // aviso al motor que ya no esta tocando un tile especial
-        flags[31] = 0;
-    }
+	}
 
 	#if defined (PLAYER_PUSH_BOXES) || !defined (DEACTIVATE_KEYS)
 		#if defined PLAYER_GENITAL || defined LOCKS_CHECK_VERTICAL
