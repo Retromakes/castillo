@@ -147,7 +147,7 @@
 // ------------------
 
 //#define PLAYER_CAN_FIRE 					// If defined, shooting engine is enabled.
-//#define PLAYER_CAN_FIRE_FLAG		1		// If defined, player can only fire when flag # is 1
+//#define PLAYER_CAN_FIRE_FLAG		2		// If defined, player can only fire when flag # is 1
 //#define PLAYER_BULLET_SPEED 		8		// Pixels/frame. 
 //#define MAX_BULLETS 				3		// Max number of bullets on screen. Be careful!.
 //#define PLAYER_BULLET_Y_OFFSET	6		// vertical offset from the player's top.
@@ -173,7 +173,7 @@
 // ---------
 
 //#define ACTIVATE_SCRIPTING				// Activates msc scripting and flag related stuff.
-//#define MAX_FLAGS 					1
+#define MAX_FLAGS 					5
 //#define SCRIPTING_DOWN					// Use DOWN as the action key.
 //#define SCRIPTING_KEY_AUX1				// Use AUX1 as the action key instead.
 //#define SCRIPTING_KEY_FIRE				// User FIRE as the action key instead.
@@ -222,7 +222,7 @@
 //#define PLAYER_DISABLE_GRAVITY			// Disable gravity. Advanced.
 
 #define PLAYER_STEPS_ON_ENEMIES			// If defined, stepping on enemies kills them
-//#define PLAYER_CAN_STEP_ON_FLAG	1		// If defined, player can only kill when flag # is "1"
+#define PLAYER_CAN_STEP_ON_FLAG		1		// If defined, player can only kill when flag # is "1"
 //#define PLAYER_MIN_KILLABLE		3		// Only kill enemies with id >= PLAYER_MIN_KILLABLE
 
 //#define PLAYER_DISABLE_DEFAULT_HENG 		// To disble default horizontal engine (side/genital)

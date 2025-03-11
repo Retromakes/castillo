@@ -4,4 +4,5 @@
 // reproduzco sonido
 //wyz_play_sound(0);
 
-inv_botas = 0;
+// con esto hago un roguemetroidvania
+ //if ((level == 0) && (inv_botas != 1)) inv_botas = 0;

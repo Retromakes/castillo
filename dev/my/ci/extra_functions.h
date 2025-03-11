@@ -29,5 +29,9 @@ void Recoge_Objeto() {
     _x = p_tx; _y = p_ty; _t = 1; _n = 0; update_tile ();
 
     // tengo q comprobar que objeto cojo para hacer lo que toque aqui
+    // si estamos en el level 0 seran las botas, que no hay otro objeto a recoger
     if (level == 0) inv_botas = 1;
+    // si estamos en el level 1 seran los pinchos, que no hay otro objeto a recoger
+    if (level == 1) flags[1] = 1;
+    
 }
