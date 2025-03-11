@@ -356,7 +356,7 @@ unsigned char player_move (void) {
 			if (veng_selector == VENG_JETPAC)
 		#endif
 		{
-			if (cpc_TestKey (KEY_UP)) {
+			if (cpc_TestKey (KEY_UP) && (inv_jetpack == 1)) {
 				#include "my/ci/on_controller_pressed/up.h"
 					
 				p_vy -= PLAYER_INCR_JETPAC;

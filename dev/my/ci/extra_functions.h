@@ -34,4 +34,6 @@ void Recoge_Objeto() {
     // si estamos en el level 1 seran los pinchos, que no hay otro objeto a recoger
     if (level == 1) flags[1] = 1;
     
+    // debug jetpack en nivel 1
+    if (level == 1) inv_jetpack = 1;
 }

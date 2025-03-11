@@ -216,7 +216,7 @@
 
 #define PLAYER_HAS_JUMP 					// If defined, player is able to jump.
 #define BOTH_KEYS_JUMP 						// If jump and no fire, use UP or FIRE to jump (only with keyboard)
-//#define PLAYER_HAS_JETPAC 				// If defined, player can thrust a vertical jetpac
+#define PLAYER_HAS_JETPAC 				// If defined, player can thrust a vertical jetpac
 //#define PLAYER_BOOTEE 					// Always jumping engine. Don't forget to disable "HAS_JUMP" and "HAS_JETPAC"!!!
 //#define PLAYER_VKEYS 						// Use with VENG_SELECTOR. Advanced.
 //#define PLAYER_DISABLE_GRAVITY			// Disable gravity. Advanced.
@@ -351,11 +351,11 @@ extern unsigned char def_keys [0];
 #define PLAYER_G					32		// Gravity acceleration 
 
 #define PLAYER_VY_INICIAL_SALTO		64 		// Initial junp velocity 
-#define PLAYER_MAX_VY_SALTANDO		300 	// Max jump velocity 
+#define PLAYER_MAX_VY_SALTANDO		256 	// Max jump velocity 
 #define PLAYER_INCR_SALTO			48		// acceleration while JUMP is pressed 
 
-#define PLAYER_INCR_JETPAC			32		// Vertical jetpac gauge
-#define PLAYER_MAX_VY_JETPAC		256 	// Max vertical jetpac speed
+#define PLAYER_INCR_JETPAC			48		// Vertical jetpac gauge
+#define PLAYER_MAX_VY_JETPAC		192 	// Max vertical jetpac speed
 
 // IV.2. Horizontal (side view) or general (top view) movement.
 
