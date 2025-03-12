@@ -68,14 +68,11 @@ REM fin multilevel
 
 REM multilevel
 echo Converting behs
-..\utils\behs2bin.exe ..\gfx\behs0_1.txt ..\bin\behs0_1.bin >nul
-..\utils\behs2bin.exe ..\gfx\behs2.txt ..\bin\behs2.bin >nul
+..\utils\behs2bin.exe ..\gfx\behs.txt ..\bin\behs0_1_2.bin >nul
 
-..\utils\apultra.exe ..\bin\behs0_1.bin ..\bin\behs0_1c.bin >nul
-..\utils\apultra.exe ..\bin\behs2.bin ..\bin\behs2c.bin >nul
+..\utils\apultra.exe ..\bin\behs0_1_2.bin ..\bin\behs0_1_2c.bin >nul
 
-del  ..\bin\behs0_1.bin >nul
-del  ..\bin\behs2.bin >nul
+del  ..\bin\behs0_1_2.bin >nul
 REM fin multilevel
 
 ..\utils\mkts_om.exe platform=cpc cpcmode=%cpc_gfx_mode% pal=..\gfx\pal.png mode=sprites in=..\gfx\sprites.png out=..\bin\sprites.bin mappings=assets\spriteset_mappings.h pixelperfectm0 silent > nul
