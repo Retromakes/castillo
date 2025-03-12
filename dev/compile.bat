@@ -21,7 +21,7 @@ cd ..\dev
 
 if [%1]==[justscripts] goto :compile
 
-echo Convirtiendo mapa (el 15 final es el tile de cerrojo)
+echo Convirtiendo mapa (el 16 final es el tile de cerrojo)
 REM multilevel
 REM ..\utils\mapcnv.exe ..\map\mapa0.map assets\mapa.h 8 4 15 10 15 packed
 ..\utils\mapcnvbin.exe ..\map\mapa0.map ..\bin\mapa_bolts0.bin 8 4 15 10 16 packed >nul
