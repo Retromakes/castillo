@@ -13,4 +13,35 @@ if ((flags[n_pant] != 0) && (flags[31] != 1)) {
 */
 
 // DEBUG TO DO tengo que comprobar que el objeto ya no ha sido recogido?
-Recoge_Objeto();
+
+// sfx
+wyz_play_sound(5);
+
+// dibujo el tile actualizado con el fondo
+_x = p_tx; _y = p_ty; _t = 0; _n = 0; update_tile ();
+
+// segun nivel y pantalla recojo el objeto que toque
+switch (level) {
+    // exterior
+    case 0:
+       // laves
+       if (n_pant == 25) {
+           llaves_recogidas = 1;
+       // botas
+       } else if (n_pant == 26) {
+           inv_botas = 1;
+       }
+    break;
+
+    // castillo
+    case 1:
+        // pinchos
+        flags[1] = 1;
+    break;
+
+    // catapumbas
+    case 2:
+        // jetpack
+        inv_jetpack = 1;
+    break;
+}
