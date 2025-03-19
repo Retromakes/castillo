@@ -50,7 +50,7 @@
 //#define PLAYER_FIN_Y				99		// Player tile coordinates to finish game
 //#define PLAYER_NUM_OBJETOS			25		// Objects to get to finish game
 #define PLAYER_LIFE 				10		// Max and starting life gauge.
-#define PLAYER_REFILL				1		// Life recharge
+//#define PLAYER_REFILL				1		// Life recharge
 #define PLAYER_DONT_LIMIT_LIFE				// PLAYER_LIFE isn't max.
 // multilevel
 #define COMPRESSED_LEVELS 				// use levels.h instead of mapa.h and enems.h (!)
@@ -94,9 +94,9 @@
 #define PLAYER_BOUNCES						// If defined, collisions make player bounce
 //#define FULL_BOUNCE 						// If defined, evil tile bounces equal MAX_VX, otherwise v/2
 //#define SLOW_DRAIN						// Works with bounces. Drain is 4 times slower
-#define PLAYER_FLICKERS 					// If defined, collisions make player flicker instead.
+//#define PLAYER_FLICKERS 					// If defined, collisions make player flicker instead.
 //#define MAP_BOTTOM_KILLS					// If defined, exiting the map bottomwise kills.
-#define WALLS_STOP_ENEMIES					// If defined, enemies react to the scenary
+//#define WALLS_STOP_ENEMIES					// If defined, enemies react to the scenary
 //#define EVERYTHING_IS_A_WALL				// If defined, any tile <> type 0 is a wall, otherwise just 8.
 //#define BODY_COUNT_ON 			2		// If defined, count enemies on flag #
 #define DISABLE_PLATFORMS 				// Disables platforms in side-view
@@ -157,7 +157,7 @@
 //#define LB_FRAMES 				4		// If defined, defines the # of frames bullets live (fixed)
 //#define LB_FRAMES_FLAG			2		// If defined, defines which flag determines the # of frames
 
-//#define RESPAWN_ON_ENTER					// Enemies respawn when entering screen
+#define RESPAWN_ON_ENTER					// Enemies respawn when entering screen
 //#define FIRE_MIN_KILLABLE			3		// If defined, only enemies >= N can be killed.
 //#define CAN_FIRE_UP 						// If defined, player can fire upwards and diagonal.
 //#define MAX_AMMO					99		// If defined, ammo is not infinite!
@@ -184,9 +184,9 @@
 // Timer
 // -----
 
-#define TIMER_ENABLE						// Enable timer
+//#define TIMER_ENABLE						// Enable timer
 //#define TIMER_INITIAL 			99		// For unscripted games, initial value.
-#define TIMER_REFILL				30		// Timer refill, using tile 21 (hotspot #5)
+//#define TIMER_REFILL				30		// Timer refill, using tile 21 (hotspot #5)
 //#define TIMER_LAPSE				32		// # of frames between decrements
 //#define TIMER_START						// If defined, start timer from the beginning
 //#define TIMER_SCRIPT_0					// If defined, timer = 0 runs "ON_TIMER_OFF" in the script
