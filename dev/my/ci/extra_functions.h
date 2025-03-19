@@ -25,8 +25,8 @@ void Recoge_Objeto() {
     // sfx
     wyz_play_sound(5);
 
-    // dibujo el tile actualizado con el fondo de la zona (tile 1)
-    _x = p_tx; _y = p_ty; _t = 1; _n = 0; update_tile ();
+    // dibujo el tile actualizado con el fondo
+    _x = p_tx; _y = p_ty; _t = 0; _n = 0; update_tile ();
 
     // tengo q comprobar que objeto cojo para hacer lo que toque aqui
     // si estamos en el level 0 seran las botas, que no hay otro objeto a recoger
