@@ -390,7 +390,7 @@ extern unsigned char def_keys [0];
 // tile 15 (exterior: botas, castillo: pinchos, catapumbas: jetpack o tiraorientales si se pone, que podria ser 14)
 
 unsigned char behs [] = {
-	0, 0, 8, 1, 8, 8, 8, 4, 8, 0, 0, 0, 0, 0, 0, 128,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 };
