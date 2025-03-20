@@ -24,11 +24,11 @@ _x = p_tx; _y = p_ty; _t = 0; _n = 0; update_tile ();
 switch (level) {
     // exterior
     case 0:
-       // laves
-       if (n_pant == 25) {
+       // Llave 1
+       if (n_pant == PANTALLA_LLAVE_1) {
            llaves_recogidas = 1;
        // botas
-       } else if (n_pant == 26) {
+       } else if (n_pant == PANTALLA_BOTAS) {
            inv_botas = 1;
        }
     break;
