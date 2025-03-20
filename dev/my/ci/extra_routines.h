@@ -10,6 +10,8 @@ switch (level) {
         }
         else if (n_pant == 31) {
             if ((p_tx == 12) && (llaves_recogidas == 1)) {
+                // sfx
+wyz_play_sound(5);
                 // abre la puerta del castillo
                 puertas_abiertas = 1;
                 Coloca_Objeto (0, 12, 2, 0);
